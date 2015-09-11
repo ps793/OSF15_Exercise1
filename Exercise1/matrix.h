@@ -1,6 +1,6 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
-
+        
 #define MATRIX_NAME_LEN 25
 
 typedef struct {

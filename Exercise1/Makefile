@@ -17,3 +17,4 @@ matrix.o: matrix.c matrix.h
 
 clean:
 	rm -f *.o matlab temp_mat
+             

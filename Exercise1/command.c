@@ -9,10 +9,25 @@
 #define MAX_CMD_LEN 25
 
 
-	//TODO FUNCTION COMMENT
+/* 
+ * PURPOSE: read what use input is  
+ * INPUTS: 
+ *	input : users' input;
+ *  cmd: put users' input into command information
+ * RETURN:
+ *  If no errors occurred during instantiation then true
+ *  else false for an error in the process.
+ *
+ **/
+
 bool parse_user_input (const char* input, Commands_t** cmd) {
 	
-	//TODO ERROR CHECK INCOMING PARAMETERS
+	// ERROR CHECK INCOMING PARAMETERS
+	if (input == NULL){
+		printf("no input from user");
+		return false;
+	}
+	//no limit on **cmd
 
 	char *string = strdup(input);
 	
@@ -36,10 +51,20 @@ bool parse_user_input (const char* input, Commands_t** cmd) {
 	return true;
 }
 
-	//TODO FUNCTION COMMENT
+/* 
+ * PURPOSE: solve the problem of memory leaking for command 
+ * INPUTS: 
+ *	cmd: users' command;
+ * RETURN:
+ *  print something based on process;
+ **/
 void destroy_commands(Commands_t** cmd) {
 
-	//TODO ERROR CHECK INCOMING PARAMETERS
+	// ERROR CHECK INCOMING PARAMETERS
+	if ((*cmd) == NULL){
+		printf("no command in destroy_commands!");
+		return;
+	}
 	
 	for (int i = 0; i < (*cmd)->num_cmds; ++i) {
 		free((*cmd)->cmds[i]);

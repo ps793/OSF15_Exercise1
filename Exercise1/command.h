@@ -1,6 +1,6 @@
 #ifndef _COMMAND_H_
 #define _COMMAND_H_
-
+    
 typedef struct {
 	unsigned int num_cmds;
 	char** cmds;
