@@ -341,7 +341,7 @@ void destroy_remaining_heap_allocations(Matrix_t **mats, unsigned int num_mats) 
 	//*mats = malloc(num_mats*sizeof(Matrix_t));
 	//*mats= realloc((*mats), num_mats*sizeof(Matrix_t));
 	for (int i = 0; i < num_mats; ++i) {
-		free(mats[num_mats]);
+		destroy_matrix(mats[num_mats]);
 		return;
 	}
 	//free((*mats));
