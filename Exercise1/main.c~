@@ -22,7 +22,7 @@ void destroy_remaining_heap_allocations(Matrix_t **mats, unsigned int num_mats);
  * PURPOSE: main function for whole process 
  * INPUTS: 
  *	argc the number of argument
- *  **argv argument pointer
+ *  **argv argument
  * RETURN:
  *  If no errors occurred during instantiation then 0
  *  else -1 for an error in the process.
